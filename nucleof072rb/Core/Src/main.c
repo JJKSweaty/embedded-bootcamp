@@ -111,7 +111,7 @@ int main(void)
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
 	  adcValue = ((rxData[1] & 0x03) << 8) | rxData[2];
 	  //register value pwm duty cycle 5-10%
-	  compareRegisterValue=(3000+((adcValue*3000)/1023));
+	  compareRegisterValue=(3200+((adcValue*3200)/1023));
 	  __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, compareRegisterValue);
 	  HAL_Delay(10);
     /* USER CODE END WHILE */
